@@ -1,6 +1,11 @@
-package cst438.hw2;
+package cst438.hw2.service;
 
 //import java.util.Date; // No longer needed
+import cst438.hw2.domain.City;
+import cst438.hw2.domain.CityInfo;
+import cst438.hw2.domain.CityRepository;
+import cst438.hw2.domain.CountryRepository;
+import cst438.hw2.domain.TempAndTime;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

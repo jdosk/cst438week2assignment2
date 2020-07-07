@@ -1,4 +1,4 @@
-package cst438.hw2;
+package cst438.hw2.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

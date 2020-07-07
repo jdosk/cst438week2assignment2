@@ -1,4 +1,4 @@
-package cst438.hw2;
+package cst438.hw2.domain;
 
 import java.util.Date;
 

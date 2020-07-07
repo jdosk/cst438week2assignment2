@@ -1,8 +1,16 @@
-package cst438.hw2;
+package cst438.hw2.service;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.mockito.BDDMockito.given;
 
+import cst438.hw2.domain.City;
+import cst438.hw2.domain.CityInfo;
+import cst438.hw2.domain.CityRepository;
+import cst438.hw2.domain.Country;
+import cst438.hw2.domain.CountryRepository;
+import cst438.hw2.domain.TempAndTime;
+import cst438.hw2.service.CityService;
+import cst438.hw2.service.WeatherService;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
