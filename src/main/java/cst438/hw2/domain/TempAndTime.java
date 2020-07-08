@@ -1,5 +1,9 @@
 package cst438.hw2.domain;
 
+import java.time.Instant;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class TempAndTime {
@@ -24,9 +28,14 @@ public class TempAndTime {
   public String convertTimeToString() {
     // Where are you adding in the time zone and adjusting for time offset?
     // Specifications request local time.
-    Date date = new Date((this.time) * 1000);
-    // Removed redundant variable here as well.
-    return date.toString();
+
+    // FIXED Per Code Review from Daniel (and his code suggestion)
+    Instant instant = Instant.ofEpochSecond(this.time);
+    ZoneOffset zoneOffset = ZoneOffset.ofTotalSeconds(this.timeZone);
+    OffsetDateTime offsetDateTime = instant.atOffset(zoneOffset);
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("hh:mm a");
+
+    return offsetDateTime.format(dateTimeFormatter);
   }
 
 }
